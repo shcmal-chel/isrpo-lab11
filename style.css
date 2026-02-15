@@ -18,6 +18,9 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-left,
@@ -97,15 +100,23 @@ button:hover {
 .search-btn {
   width: 64px;
   height: 40px;
-  border-radius: 0 40px 40px 0;
+  border-radius: 0px 40px 40px 0px;
   border: 1px solid #ccc;
-  border-left: none;
   background-color: #f8f8f8;
   cursor: pointer;
 }
 
 .search-btn:hover {
   background-color: #f0f0f0;
+}
+
+.make-btn {
+  width: 64px;
+  height: 40px;
+  border-radius: 40px 40px 40px 40px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer;
 }
 
 /* Content контейнер */
@@ -119,12 +130,14 @@ button:hover {
   padding: 12px 0;
   height: calc(100vh - 56px);
   overflow-y: auto;
+  position: sticky;
+  top: 56px;
 }
 .sidebar nav {
   display: flex;
   flex-direction: column;
 }
-.sidebar-link {
+        .sidebar-link {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -132,6 +145,7 @@ button:hover {
   color: #030303;
   text-decoration: none;
   transition: background-color 0.2s;
+  font-size: 14px;
 }
 .sidebar-link:hover {
   background-color: #f2f2f2;
